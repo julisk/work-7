@@ -1,0 +1,37 @@
+.content {
+  padding-bottom: 94px;
+}
+
+.content-list {
+  display: flex;
+}
+
+.content-title {
+  @extend %subtitle;
+}
+
+.content-list-item {
+  position: relative;
+
+  &:not(:last-child) {
+    margin-right: 30px;
+  }
+}
+
+.content-list-item-text {
+  position: absolute;
+  bottom: 0;
+  display: block;
+  width: 100%;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  padding-top: 27px;
+  padding-bottom: 27px;
+
+  background-color: rgba(47, 48, 58, 0.8);
+  font-weight: 700;
+  text-align: center;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: $title-dark-theme-color;
+}

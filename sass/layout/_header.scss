@@ -1,0 +1,114 @@
+.container-header {
+  display: flex;
+  align-items: center;
+}
+
+.header::after {
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  content: "";
+  width: 100%;
+  height: 0px;
+  border: 1px solid #ececec;
+}
+
+.navigation {
+  display: flex;
+  align-items: center;
+
+  &-list {
+    display: flex;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  &-logo {
+    display: block;
+    margin-right: 85px;
+    font-family: $font-logo;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 1.19;
+    letter-spacing: 0.03em;
+    color: #000000;
+  }
+
+  &-logo-text {
+    color: $accent;
+  }
+}
+
+.navigation-list-item:not(:last-child) {
+  margin-right: 50px;
+}
+
+.navigation-list-link {
+  padding-top: 32px;
+  padding-bottom: 32px;
+  color: $title-light-theme-color;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover,
+  &:focus {
+    color: $accent;
+  }
+}
+
+.navigation-list-link-active {
+  padding-top: 32px;
+  color: $accent;
+
+  &::after {
+    display: block;
+    margin-top: 28px;
+    margin-right: auto;
+    margin-left: auto;
+    content: "";
+    width: 100%;
+    height: 4px;
+    background: $accent;
+    border-radius: 2px;
+  }
+}
+
+.address {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+}
+
+.address-link-mail {
+  padding-top: 32px;
+  padding-bottom: 32px;
+  font-style: normal;
+  color: $text-color;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:not(:last-child) {
+    margin-right: 30px;
+  }
+
+  &:hover,
+  &:focus {
+    color: $accent;
+  }
+}
+
+.address-link-svg {
+  margin-right: 10px;
+  fill: $text-color;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.address-link-mail:hover .address-link-svg,
+.address-link-mail:focus .address-link-svg {
+  fill: $accent;
+}
+
+.img-logo {
+  margin-top: 0;
+  margin-right: 10px;
+  margin-bottom: 0;
+}
